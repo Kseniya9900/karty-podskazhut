@@ -39,14 +39,13 @@ figure {
 }
 
 .header {
-  margin-top: 10%;
+  padding-top: 10%;
 }
 
 
 .heading {
   font-family: var(--accent-font, Arial, sans-serif);
-  font-size: 30px;
-  letter-spacing: 0.9px;
+  line-height: 90%;
   font-weight: 600;
   text-align: center;
 }
@@ -64,6 +63,88 @@ figure {
 
 .content__title {
   font-size: 30px;
-  margin: 7% 0  2.5% 0;
+  margin: 7% 0  2.5%;
 
+}
+
+
+.content__text-block {
+  font-size: 18px;
+}
+
+.content__text-block .content__paragraph:not(:last-of-type) {
+  margin-bottom: 1.5em;
+}
+
+.content__text-block__link {
+  color: currentColor;
+}
+
+
+.content__blockquote {
+  width: 75%;
+  font-style: italic;
+  line-height: 200%;
+  margin: 0 auto 1.5em;
+}
+
+
+.content__list {
+  list-style: none;
+  padding: 0 0 0 40;
+}
+
+.content__list .content__list__item {
+  position: relative;
+}
+
+.content__list .content__list__item::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-image: url('../images/marker-light.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: -7.5px;
+  top: 50%;
+  left: -25px;
+
+}
+
+.content__list li:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+
+.content__text-block_type_first-lettered::first-letter {
+  display: inline-block;
+  background-color: var(--accent-color);
+  padding: 0 4px;
+  margin-left: 1px;
+  font-size: 30px;
+  font-weight: 700;
+
+}
+
+
+.content__figure {
+  margin: 7% auto;
+  width: calc(100% + 2 * 5vi);
+  position: relative;
+  left: calc(-5vi);
+}
+
+.content__picture {
+  width: 100%;
+}
+
+.content__picture-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  font-size: 18px;
+  border-bottom: 1px solid var(--text-color);
 }
