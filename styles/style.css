@@ -47,7 +47,7 @@ button:focus {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 1px solid var(--text-color);
+  outline: 1px solid currentColor;
 }
 
 button:disabled {
@@ -67,7 +67,7 @@ button:disabled {
 
 .header__title {
   font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
-  margin-bottom: 40px;
+  margin-block-end: 40px;
 }
 
 .content-section {
@@ -84,7 +84,7 @@ button:disabled {
 }
 
 .content__text-block .content__paragraph:not(:last-of-type) {
-  margin-bottom: 1.5em;
+  margin-block-end: 1.5em;
 }
 
 .app-link {
@@ -92,7 +92,7 @@ button:disabled {
 }
 
 .content__blockquote {
-  width: 75%;
+  inline-size: 75%;
   font-style: italic;
   line-height: 200%;
   margin: 0 auto 1.5em;
@@ -108,15 +108,15 @@ button:disabled {
 }
 
 .content__list li:not(:last-of-type) {
-  margin-bottom: 10px;
+  margin-block-end: 10px;
 }
 
 .content__list li::before {
   content: "";
   position: absolute;
-  width: 15px;
-  height: 15px;
-  margin-top: -7.5px;
+  inline-size: 15px;
+  block-size: 15px;
+  margin-block-start: -7.5px;
   background-image: url("../images/marker-light.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -130,20 +130,20 @@ button:disabled {
   display: inline-block;
   background-color: var(--accent-color);
   padding: 0 4px;
-  margin-right: 1px;
+  margin-inline-end: 1px;
   font-size: 30px;
   font-weight: 700;
 }
 
 .content__figure {
   margin: 7% auto;
-  width: calc(100% + 2 * 5vi);
+  inline-size: calc(100% + 2 * 5vi);
   position: relative;
   left: calc(-5vi);
 }
 
 .content__picture {
-  width: 100%;
+  inline-size: 100%;
 }
 
 .content__picture-caption {
@@ -152,7 +152,7 @@ button:disabled {
   justify-content: center;
   padding: 20px 0;
   font-size: 18px;
-  border-bottom: 1px solid var(--text-color);
+  border-bottom: 1px solid currentColor;
 }
 
 .content__card {
@@ -161,8 +161,8 @@ button:disabled {
   justify-content: center;
   align-items: center;
   aspect-ratio: 4 / 3;
-  margin-top: 7%;
-  border: 1px solid var(--text-color);
+  margin-block-start: 7%;
+  border: 1px solid currentColor;
 }
 
 .content__card-title {
@@ -179,8 +179,8 @@ button:disabled {
   position: absolute;
   left: -4px;
   bottom: 0.3ch;
-  width: calc(100% + 2 * 4px);
-  height: 0.5ch;
+  inline-size: calc(100% + 2 * 4px);
+  block-size: 0.5ch;
   z-index: -1;
 
   background-color: var(--accent-color);
@@ -194,8 +194,8 @@ button:disabled {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid var(--text-color);
-  border-bottom: 1px solid var(--text-color);
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
   padding-block: 20px;
 }
 
@@ -213,7 +213,7 @@ button:disabled {
   font-size: 18px;
   background-color: transparent;
   font-family: inherit;
-  color: var(--text-color);
+  color: currentColor;
   cursor: pointer;
 }
 
@@ -230,8 +230,8 @@ button:disabled {
   position: absolute;
   left: -4px;
   bottom: 0.3ch;
-  width: calc(100% + 2 * 4px);
-  height: 0.5ch;
+  inline-size: calc(100% + 2 * 4px);
+  block-size: 0.5ch;
   z-index: -1;
 
   background-color: var(--accent-color);
@@ -239,9 +239,9 @@ button:disabled {
 
 .footer {
   text-align: center;
-  margin-top: 10%;
+  margin-block-start: 10%;
   padding: 2.5%;
-  border-top: 1px solid var(--text-color);
+  border-top: 1px solid currentColor;
 }
 
 .footer__copyright {
@@ -259,7 +259,7 @@ button:disabled {
 .theme_dark
   .content__text-block_type_first-lettered
   .content__paragraph:first-child::first-letter {
-  border: 1px solid var(--text-color);
+  border: 1px solid currentColor;
 }
 
 .theme_dark .content__list li::before {
